@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom - Virtual Classroom</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/classroom.css">
+    <script src="https://unpkg.com/peerjs@1.4.7/dist/peerjs.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="assets/logo.png" alt="Logo" width="50">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><span id="user-name">Welcome, Guest</span></li>
+            <li><a href="#" id="logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main class="classroom-container">
+        <section class="video-section">
+            <div id="video-grid"></div>
+            <div class="controls">
+                <button id="mute-btn">Mute</button>
+                <button id="video-btn">Stop Video</button>
+                <button id="share-screen-btn">Share Screen</button>
+            </div>
+        </section>
+
+        <section class="whiteboard-section">
+            <canvas id="whiteboard" width="600" height="400"></canvas>
+            <div class="whiteboard-tools">
+                <button id="pen-btn">Pen</button>
+                <button id="eraser-btn">Eraser</button>
+                <button id="clear-btn">Clear</button>
+                <input type="color" id="color-picker" value="#000000">
+            </div>
+        </section>
+
+        <section class="chat-section">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <div id="file-drop" class="drop-zone">Drop files here</div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Virtual Classroom. All rights reserved.</p>
+    </footer>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/classroom.js"></script>
+</body>
+</html>
