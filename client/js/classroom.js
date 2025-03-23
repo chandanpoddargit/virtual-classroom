@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     const socket = io('https://virtual-classroom-app-m5a6.onrender.com', {
-        transports: ['websocket'],  
-        withCredentials: true 
+        transports: ['websocket', 'polling'],  // Try both WebSocket and polling
+        withCredentials: true,
+        reconnection: true,
+        reconnectionAttempts: 5,
+        reconnectionDelay: 2000
     });
     const videoGrid = document.getElementById('video-grid');
     const whiteboard = document.getElementById('whiteboard');
