@@ -21,7 +21,7 @@ connectDB();
 
 // CORS configuration
 const corsOptions = {
-    origin: ["silver-custard-677b48.netlify.app"], 
+    origin: ["brilliant-beijinho-2eb716.netlify.app"], 
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true
 };
