@@ -32,7 +32,7 @@ app.use(express.static(path.join(__dirname, '../client')));
 // Initialize Socket.io with CORS handling
 const io = socketIo(server, {
     cors: {
-        origin: "silver-custard-677b48.netlify.app", 
+        origin: "brilliant-beijinho-2eb716.netlify.app", 
         methods: ["GET", "POST"]
     }
 });
