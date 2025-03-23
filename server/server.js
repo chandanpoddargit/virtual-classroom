@@ -8,9 +8,12 @@ const path = require('path');
 const authRoutes = require('./routes/auth');
 const classroomSockets = require('./sockets/classroom');
 const { PeerServer } = require('peer');
+const connectDB = require('../server/config/db');
 
 dotenv.config();
-const connectDB = require('./config/db');
+dotenv.config({
+    path: './.env'
+})
 console.log("MONGO_URI:", process.env.MONGO_URI)
 connectDB();
 
