@@ -2,7 +2,7 @@ const token = localStorage.getItem('token');
 
 async function fetchUserData() {
   try {
-    const response = await fetch('http://localhost:5000/api/auth/user', {
+    const response = await fetch('https://virtual-classroom-app-m5a6.onrender.com/api/auth/user', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`
